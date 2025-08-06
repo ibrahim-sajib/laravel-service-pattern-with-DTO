@@ -7,6 +7,10 @@ use App\Models\Blog;
 
 class BlogService
 {
+    public function getAllBlogs()
+    {
+        return Blog::all();
+    }
     public function store(BlogDto $dto)
     {
         return Blog::create([

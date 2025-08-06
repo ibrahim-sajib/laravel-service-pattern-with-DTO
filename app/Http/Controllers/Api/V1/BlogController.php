@@ -15,6 +15,15 @@ class BlogController extends Controller
         protected BlogService $service
     )
     {}
+
+    public function index(): array
+    {
+        $blogs = $this->service->getAllBlogs();
+
+        return $blogs->map(function ($blog) {
+            return BlogResource::make($blog);
+        })->all();
+    }
     public function store(BlogRequest $request): BlogResource
     {
         $blog = $this->service->store(

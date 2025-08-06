@@ -19,10 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// TODO:: Add the Api routes for Blog
 
-
-
-// Define routes for blog operations
+Route::get('/blogs', [BlogController::class, 'index']);
 Route::post('/blogs', [BlogController::class, 'store']);
 Route::put('/blogs/{blog}', [BlogController::class, 'update']);
