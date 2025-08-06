@@ -1,8 +1,8 @@
-# Laravel + Service Pattern + DTOs
+# Laravel + Service Pattern + DTO
 
 ## Overview
 
-This repository showcases a Laravel project implementing the Service Pattern along with Data Transfer Objects (DTOs) for handling blog-related operations. The primary goal is to demonstrate a clean and maintainable architecture by separating concerns and promoting reusability.
+This repository illustrates a Laravel project that employs the Service Pattern and Data Transfer Objects (DTOs) to handle blog-related operations. The overall goal is to show a clean and sustainable architecture by separating concerns and reuse.
 
 ## Components
 
@@ -70,16 +70,6 @@ To use this architecture as a foundation for your Laravel projects, follow these
 4. **Routes:**
    - Define routes in your `web.php` or `api.php` file to map HTTP requests to controller methods.
 
-## Example:
-
-```php
-use App\Http\Controllers\BlogController;
-
-// Define routes for blog operations
-Route::post('/blogs', [BlogController::class, 'store']);
-Route::put('/blogs/{blog}', [BlogController::class, 'update']);
-```
-
 ## Note
 
-Ensure you have the necessary dependencies installed and configured, and the database is set up correctly. This repository serves as a guide and starting point for developing scalable and maintainable Laravel applications using the Service Pattern and DTOs. Feel free to customize and expand upon this foundation based on your specific project requirements.
+Ensure you have the necessary dependencies installed and configured.
