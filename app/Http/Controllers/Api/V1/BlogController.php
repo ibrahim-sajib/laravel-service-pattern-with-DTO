@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Actions\ShowBlogsAction;
 use App\DataTransferObjects\BlogDto;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\BlogRequest;
@@ -41,5 +42,12 @@ class BlogController extends Controller
         );
 
         return BlogResource::make($blog);
+    }
+
+    public function showBlogsThroughAction(): array
+    {
+        $blogs = (new ShowBlogsAction())->handle();
+
+        return $blogs->toArray();
     }
 }
